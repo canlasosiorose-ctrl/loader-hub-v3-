@@ -1,0 +1,252 @@
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local TitleBar = Instance.new("Frame")
+local TitleLabel = Instance.new("TextLabel")
+local MinimizeButton = Instance.new("TextButton")
+local CloseButton = Instance.new("TextButton")
+local LoadersPage = Instance.new("Frame")
+local RunButton = Instance.new("TextButton")
+local OnyxButton = Instance.new("TextButton")
+local WaguriButton = Instance.new("TextButton")
+local HoneyButton = Instance.new("TextButton")
+local RivalsButton = Instance.new("TextButton")
+local RunText = Instance.new("TextLabel")
+local OnyxText = Instance.new("TextLabel")
+local WaguriText = Instance.new("TextLabel")
+local HoneyText = Instance.new("TextLabel")
+local RivalsText = Instance.new("TextLabel")
+local MainCorner = Instance.new("UICorner")
+local TitleCorner = Instance.new("UICorner")
+local RunCorner = Instance.new("UICorner")
+local OnyxCorner = Instance.new("UICorner")
+local WaguriCorner = Instance.new("UICorner")
+local HoneyCorner = Instance.new("UICorner")
+local RivalsCorner = Instance.new("UICorner")
+local OofSound = Instance.new("Sound")
+OofSound.SoundId = "rbxassetid://12222242"
+OofSound.Volume = 0.8
+OofSound.Parent = ScreenGui
+local function playOof()
+OofSound:Play()
+end
+ScreenGui.Parent = game:GetService("CoreGui")
+MainFrame.Name = "LoaderHub"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(15, 0, 0)
+MainFrame.BackgroundTransparency = 0.1
+MainFrame.Position = UDim2.new(0.35, 0, 0.2, 0)
+MainFrame.Size = UDim2.new(0, 280, 0, 260)
+MainFrame.Active = true
+MainFrame.Draggable = true
+MainCorner.CornerRadius = UDim.new(0, 10)
+MainCorner.Parent = MainFrame
+TitleBar.Name = "TitleBar"
+TitleBar.Parent = MainFrame
+TitleBar.BackgroundColor3 = Color3.fromRGB(130, 0, 0)
+TitleBar.BackgroundTransparency = 0.2
+TitleBar.Size = UDim2.new(1, 0, 0, 42)
+TitleCorner.CornerRadius = UDim.new(0, 10)
+TitleCorner.Parent = TitleBar
+TitleLabel.Parent = TitleBar
+TitleLabel.BackgroundTransparency = 1
+TitleLabel.Position = UDim2.new(0.06, 0, 0, 0)
+TitleLabel.Size = UDim2.new(0.55, 0, 1, 0)
+TitleLabel.Text = "Loader Hub"
+TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleLabel.TextSize = 18
+TitleLabel.Font = Enum.Font.GothamBold
+TitleLabel.TextXAlignment = Enum.TextXAlignment.Left
+MinimizeButton.Parent = TitleBar
+MinimizeButton.Position = UDim2.new(0.7, 0, 0.2, 0)
+MinimizeButton.Size = UDim2.new(0, 32, 0, 26)
+MinimizeButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MinimizeButton.BackgroundTransparency = 0.2
+MinimizeButton.Text = "-"
+MinimizeButton.TextColor3 = Color3.fromRGB(200, 200, 200)
+MinimizeButton.TextSize = 22
+MinimizeButton.Font = Enum.Font.GothamBold
+local MinCorner = Instance.new("UICorner")
+MinCorner.CornerRadius = UDim.new(0, 6)
+MinCorner.Parent = MinimizeButton
+CloseButton.Parent = TitleBar
+CloseButton.Position = UDim2.new(0.85, 0, 0.2, 0)
+CloseButton.Size = UDim2.new(0, 32, 0, 26)
+CloseButton.BackgroundColor3 = Color3.fromRGB(200, 40, 40)
+CloseButton.BackgroundTransparency = 0.2
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextSize = 15
+CloseButton.Font = Enum.Font.GothamBold
+local CloseCorner = Instance.new("UICorner")
+CloseCorner.CornerRadius = UDim.new(0, 6)
+CloseCorner.Parent = CloseButton
+LoadersPage.Name = "LoadersPage"
+LoadersPage.Parent = MainFrame
+LoadersPage.BackgroundTransparency = 1
+LoadersPage.Position = UDim2.new(0, 0, 0, 42)
+LoadersPage.Size = UDim2.new(1, 0, 1, -42)
+LoadersPage.Visible = true
+RunButton.Parent = LoadersPage
+RunButton.Position = UDim2.new(0.07, 0, 0.03, 0)
+RunButton.Size = UDim2.new(0.86, 0, 0.15, 0)
+RunButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+RunCorner.CornerRadius = UDim.new(0, 8)
+RunCorner.Parent = RunButton
+RunText.Parent = RunButton
+RunText.Size = UDim2.new(1, 0, 1, 0)
+RunText.BackgroundTransparency = 1
+RunText.Text = "Run Chilli Hub"
+RunText.TextColor3 = Color3.fromRGB(255, 100, 255)
+RunText.TextSize = 14
+RunText.Font = Enum.Font.GothamBold
+OnyxButton.Parent = LoadersPage
+OnyxButton.Position = UDim2.new(0.07, 0, 0.22, 0)
+OnyxButton.Size = UDim2.new(0.86, 0, 0.15, 0)
+OnyxButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+OnyxCorner.CornerRadius = UDim.new(0, 8)
+OnyxCorner.Parent = OnyxButton
+OnyxText.Parent = OnyxButton
+OnyxText.Size = UDim2.new(1, 0, 1, 0)
+OnyxText.BackgroundTransparency = 1
+OnyxText.Text = "Run OnyxHub"
+OnyxText.TextColor3 = Color3.fromRGB(240, 240, 240)
+OnyxText.TextSize = 14
+OnyxText.Font = Enum.Font.GothamBold
+WaguriButton.Parent = LoadersPage
+WaguriButton.Position = UDim2.new(0.07, 0, 0.41, 0)
+WaguriButton.Size = UDim2.new(0.86, 0, 0.15, 0)
+WaguriButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+WaguriCorner.CornerRadius = UDim.new(0, 8)
+WaguriCorner.Parent = WaguriButton
+WaguriText.Parent = WaguriButton
+WaguriText.Size = UDim2.new(1, 0, 1, 0)
+WaguriText.BackgroundTransparency = 1
+WaguriText.Text = "Run Waguri Lite"
+WaguriText.TextColor3 = Color3.fromRGB(255, 200, 50)
+WaguriText.TextSize = 14
+WaguriText.Font = Enum.Font.GothamBold
+HoneyButton.Parent = LoadersPage
+HoneyButton.Position = UDim2.new(0.07, 0, 0.60, 0)
+HoneyButton.Size = UDim2.new(0.86, 0, 0.15, 0)
+HoneyButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+HoneyCorner.CornerRadius = UDim.new(0, 8)
+HoneyCorner.Parent = HoneyButton
+HoneyText.Parent = HoneyButton
+HoneyText.Size = UDim2.new(1, 0, 1, 0)
+HoneyText.BackgroundTransparency = 1
+HoneyText.Text = "Run Honey Lua"
+HoneyText.TextColor3 = Color3.fromRGB(255, 255, 100)
+HoneyText.TextSize = 14
+HoneyText.Font = Enum.Font.GothamBold
+RivalsButton.Parent = LoadersPage
+RivalsButton.Position = UDim2.new(0.07, 0, 0.79, 0)
+RivalsButton.Size = UDim2.new(0.86, 0, 0.15, 0)
+RivalsButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+RivalsCorner.CornerRadius = UDim.new(0, 8)
+RivalsCorner.Parent = RivalsButton
+RivalsText.Parent = RivalsButton
+RivalsText.Size = UDim2.new(1, 0, 1, 0)
+RivalsText.BackgroundTransparency = 1
+RivalsText.Text = "Run Aimbot (Rivals)"
+RivalsText.TextColor3 = Color3.fromRGB(255, 75, 75)
+RivalsText.TextSize = 14
+RivalsText.Font = Enum.Font.GothamBold
+CloseButton.MouseButton1Click:Connect(function()
+playOof()
+task.wait(0.15)
+ScreenGui:Destroy()
+end)
+local isMinimized = false
+MinimizeButton.MouseButton1Click:Connect(function()
+playOof()
+isMinimized = not isMinimized
+if isMinimized then
+LoadersPage.Visible = false
+MainFrame:TweenSize(UDim2.new(0, 280, 0, 42), "Out", "Quad", 0.2, true)
+MinimizeButton.Text = "+"
+else
+MainFrame:TweenSize(UDim2.new(0, 280, 0, 260), "Out", "Quad", 0.2, true, function()
+LoadersPage.Visible = true
+end)
+MinimizeButton.Text = "-"
+end
+end)
+RunButton.MouseButton1Click:Connect(function()
+playOof()
+local targetScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()'
+RunText.Text = "Processing..."
+if setclipboard then setclipboard(targetScript) end
+pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()
+end)
+task.wait(0.4)
+RunText.Text = "Run Chilli Hub"
+end)
+local targetId = game.PlaceId
+local targetGame = game.GameId
+if targetId ~= 142823291 and targetGame ~= 66654135 then
+OnyxButton.Active = false
+OnyxButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+OnyxText.Text = "OnyxHub (Not MM2!)"
+OnyxText.TextColor3 = Color3.fromRGB(80, 80, 80)
+WaguriButton.Active = false
+WaguriButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+WaguriText.Text = "Waguri Lite (Not MM2!)"
+WaguriText.TextColor3 = Color3.fromRGB(80, 80, 80)
+HoneyButton.Active = false
+HoneyButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+HoneyText.Text = "Honey Lua (Not MM2!)"
+HoneyText.TextColor3 = Color3.fromRGB(80, 80, 80)
+else
+OnyxButton.MouseButton1Click:Connect(function()
+playOof()
+local onyxScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/zyntrix20/OnyxHub/refs/heads/main/Loader"))()'
+OnyxText.Text = "Processing..."
+if setclipboard then setclipboard(onyxScript) end
+pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zyntrix20/OnyxHub/refs/heads/main/Loader"))()
+end)
+task.wait(0.4)
+OnyxText.Text = "Run OnyxHub"
+end)
+WaguriButton.MouseButton1Click:Connect(function()
+playOof()
+local waguriScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/Waguriiiii/Murder-mystery-2/refs/heads/main/Waguri-lite"))()'
+WaguriText.Text = "Processing..."
+if setclipboard then setclipboard(waguriScript) end
+pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Waguriiiii/Murder-mystery-2/refs/heads/main/Waguri-lite"))()
+end)
+task.wait(0.4)
+WaguriText.Text = "Run Waguri Lite"
+end)
+HoneyButton.MouseButton1Click:Connect(function()
+playOof()
+local honeyScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/mervsbsvsb/MurderMystery2Keyless/refs/heads/main/HoneyLua.lua"))()'
+HoneyText.Text = "Processing..."
+if setclipboard then setclipboard(honeyScript) end
+pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mervsbsvsb/MurderMystery2Keyless/refs/heads/main/HoneyLua.lua"))()
+end)
+task.wait(0.4)
+HoneyText.Text = "Run Honey Lua"
+end)
+end
+if targetId ~= 17134375084 and targetGame ~= 5936306069 then
+RivalsButton.Active = false
+RivalsButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+RivalsText.Text = "Rivals Aimbot (Not Rivals!)"
+RivalsText.TextColor3 = Color3.fromRGB(80, 80, 80)
+else
+RivalsButton.MouseButton1Click:Connect(function()
+playOof()
+local rivalsScript = 'loadstring(game:HttpGet("https://rawscripts.net/raw/RIVALS-Aimbot-no-banned-yes-sure-102092"))()'
+RivalsText.Text = "Processing..."
+if setclipboard then setclipboard(rivalsScript) end
+pcall(function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/RIVALS-Aimbot-no-banned-yes-sure-102092"))()
+end)
+task.wait(0.4)
+RivalsText.Text = "Run Aimbot (Rivals)"
+end)
+end
